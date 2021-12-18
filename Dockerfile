@@ -1,7 +1,7 @@
-FROM python:3.9
+FROM python:3.8-buster
 
-RUN pip install request
+COPY app.py ./
 
-copy app.py .
+RUN python3 -m pip install requests
 
-cmd ["py", "app.py"]
+CMD ["python", "app.py"]
