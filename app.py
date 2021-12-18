@@ -9,6 +9,7 @@ datos={
   "apiKey": "9xMWrRUB3uOD4H6PTXIujgDtjvuwvVil8N9gFubsmHFH",
   "submitConfirmation": False
 }
-
-response = requests.post('http://172.21.188.211:3000/submit', json=json.dumps(datos)).text()
-print(response)
+print('pruieba')
+response = requests.post('http://172.21.188.211:3000/submit', data=datos)
+print(response.status_code)
+print(response.content)
